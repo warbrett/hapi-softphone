@@ -2,6 +2,7 @@
 
 import indexHandler from './handlers/index';
 import twimlHandler from './handlers/twiml';
+import inboundTwimlHandler from './handlers/inbound-twiml';
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     method: 'GET',
     path: '/twiml',
     handler: twimlHandler
+  },
+  {
+    method: 'GET',
+    path: '/inbound-twiml',
+    handler: inboundTwimlHandler
   }
 ];
 
