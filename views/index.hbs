@@ -40,7 +40,7 @@
             params = {
               'PhoneNumber': $('#number').val(),
               // TODO: Make this selectable
-              'CallerId': ''
+              'CallerId': '{{numbers.0.phoneNumber}}'
             };
             Twilio.Device.connect(params);
         }
@@ -51,6 +51,9 @@
     </script>
   </head>
   <body>
+    <div>
+      Caller Id: {{numbers.0.friendlyName}}
+    </div>
     <button class='call' onclick='call();'>
       Call
     </button>
